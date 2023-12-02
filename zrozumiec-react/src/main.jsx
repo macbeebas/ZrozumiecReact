@@ -12,6 +12,23 @@ const person = {
   name: "Filip",
   age: 29,
 };
-const element = <div>{[1, 2, 3]}</div>;
+const paragraphElement = (
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+    aspernatur cupiditate nulla. Dolorem assumenda, quidem sint ipsum labore id
+    numquam odio, tempora autem provident suscipit ipsam ea sequi illum
+    sapiente.
+  </p>
+);
+const element = (
+  <div>
+    {paragraphElement}
+    {paragraphElement}
+    {paragraphElement}
+    {paragraphElement}
+    {paragraphElement}
+    {paragraphElement}
+  </div>
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(element);
