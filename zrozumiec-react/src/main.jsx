@@ -13,12 +13,18 @@ const person = {
   age: 29,
 };
 const paragraphElement = (
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
-    aspernatur cupiditate nulla. Dolorem assumenda, quidem sint ipsum labore id
-    numquam odio, tempora autem provident suscipit ipsam ea sequi illum
-    sapiente.
-  </p>
+  <>
+    <h2>Heading</h2>
+    <a href="http://zrozumiecreact.pl" className="link">
+      Strona kursu
+    </a>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
+      aspernatur cupiditate nulla. Dolorem assumenda, quidem sint ipsum labore
+      id numquam odio, tempora autem provident suscipit ipsam ea sequi illum
+      sapiente.
+    </p>
+  </>
 );
 const element = (
   <div>
