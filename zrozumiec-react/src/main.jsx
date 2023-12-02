@@ -12,10 +12,6 @@ const person = {
   name: "Filip",
   age: 29,
 };
-const element = (
-  <div>
-    {person.name}, wiek: {person.age}
-  </div>
-);
+const element = <div>{[1, 2, 3]}</div>;
 
 ReactDOM.createRoot(document.getElementById("root")).render(element);
