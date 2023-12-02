@@ -8,6 +8,14 @@ function getRandomNumber() {
   // return Math.round(Math.random() * 100);
   console.log(Math.round(Math.random() * 100));
 }
-const element = <div>{getRandomNumber()}</div>;
+const person = {
+  name: "Filip",
+  age: 29,
+};
+const element = (
+  <div>
+    {person.name}, wiek: {person.age}
+  </div>
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(element);
