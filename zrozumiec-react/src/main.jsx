@@ -15,7 +15,7 @@ const person = {
 const paragraphElement = (
   <>
     <h2>Heading</h2>
-    <a href="http://zrozumiecreact.pl" className="link">
+    <a href="http://zrozumiecreact.pl" className="link" for="">
       Strona kursu
     </a>
     <p>
