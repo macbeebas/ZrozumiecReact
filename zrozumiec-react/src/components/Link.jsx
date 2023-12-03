@@ -1,12 +1,8 @@
-function Span() {
-  return <span>Strona kursu</span>;
-}
-
 export function Link() {
-  const address = "http://zrozumiecreact.pl";
+  const address = "https://zrozumiecreact.pl";
   return (
     <a href={address} target="_blank" rel="noopener noreferrer">
-      <Span />
+      Sprawdź stronę teraz!
     </a>
   );
 }
