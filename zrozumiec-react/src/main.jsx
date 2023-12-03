@@ -6,7 +6,7 @@ const linkElement = (
   </a>
 );
 
-function LinkComponent() {
+function Link() {
   return (
     <a
       href="http://zrozumiecreact.pl"
@@ -22,8 +22,7 @@ const element = (
   <>
     <h1>Nasza strona!</h1>
     <main>
-      {/* {LinkComponent()} */}
-      <LinkComponent></LinkComponent>
+      <Link />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, saepe
         cum doloremque fugit id ad ea sed harum vel. Nam odio quos tenetur aut
