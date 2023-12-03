@@ -5,13 +5,13 @@ const element = (
   <>
     <h1>Nasza strona!</h1>
     <main>
-      <Link text="Sprawdź strone kursu!" />
+      <Link text="Sprawdź strone kursu!" shouldOpenNewTab={true} />
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere labore
         blanditiis magnam eveniet rem ratione, voluptatum nulla inventore
         quaerat necessitatibus.
       </p>
-      <Link text="https://zrozumiecreact.pl" />
+      <Link text="https://zrozumiecreact.pl" shouldOpenNewTab={false} />
       {/* -> jak funkcja 'Link({text: "https://zrozumiecreact.pl"})', która otrzymuje jako propsy obiekt */}
     </main>
   </>
