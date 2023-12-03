@@ -1,22 +1,12 @@
 import ReactDOM from "react-dom/client";
 
+import { Link } from "./components/Link";
+
 const linkElement = (
   <a href="http://zrozumiecreact.pl" target="_blank" rel="noopener noreferrer">
     Sprawdź już teraz!
   </a>
 );
-
-function Link() {
-  return (
-    <a
-      href="http://zrozumiecreact.pl"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Sprawdź już teraz!
-    </a>
-  );
-}
 
 const element = (
   <>
