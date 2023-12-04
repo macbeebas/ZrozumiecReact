@@ -11,8 +11,7 @@ const element = (
         blanditiis magnam eveniet rem ratione, voluptatum nulla inventore
         quaerat necessitatibus.
       </p>
-      <Link text="https://zrozumiecreact.pl" shouldOpenNewTab={false} />
-      {/* -> jak funkcja 'Link({text: "https://zrozumiecreact.pl"})', która otrzymuje jako propsy obiekt */}
+      <Link shouldOpenNewTab={false} />
     </main>
   </>
 );
