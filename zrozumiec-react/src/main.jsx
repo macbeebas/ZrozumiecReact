@@ -4,7 +4,7 @@ import { HeadingItalic } from "./components/HeadingItalic";
 
 const element = (
   <>
-    <HeadingItalic text="Nasza super strona" />
+    <HeadingItalic>Nasza super strona</HeadingItalic>
     <main>
       <Link text="Sprawdź strone kursu!" shouldOpenNewTab={true} />
       <p>
