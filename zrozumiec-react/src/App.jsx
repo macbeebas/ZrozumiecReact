@@ -17,7 +17,7 @@ function App() {
         Email: <a href={`mailto:${jan.mail}`}>{jan.mail}</a>
       </div>
       <div>
-        Telefon: <a href={`tel: ${jan.mail}`}>{jan.mail}</a>
+        Telefon: <a href={`tel: ${jan.tel}`}>{jan.tel}</a>
       </div>
     </address>
   );
