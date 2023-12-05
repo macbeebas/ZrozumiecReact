@@ -17,3 +17,4 @@ export function PersonInfo({ person }) {
     </address>
   );
 }
+//
