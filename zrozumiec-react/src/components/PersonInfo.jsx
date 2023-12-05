@@ -17,5 +17,3 @@ export function PersonInfo({ person }) {
     </address>
   );
 }
-
-// A && B => Jeśli A jest "undefined/falsy" to zwrócimy A, jeśli nie, to zwrócimy B
