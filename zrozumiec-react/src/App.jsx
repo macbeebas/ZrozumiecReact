@@ -13,12 +13,19 @@ function App() {
     mail: "janina.kow@gmail.com",
     tel: "+48 888 000 222",
   };
+  const karol = {
+    name: "Karol",
+    lastName: "Kowalski",
+    mail: "karol.kow@gmail.com",
+  };
 
   return (
     <>
       <PersonInfo person={jan} />
       <br />
       <PersonInfo person={janina} />
+      <br />
+      <PersonInfo person={karol} />
     </>
   );
 }
