@@ -1,5 +1,4 @@
 import { PersonInfo } from "./components/PersonInfo";
-import imageFromAssets from "./assets/dog-assets.jpg";
 
 function App() {
   const jan = {
@@ -28,7 +27,7 @@ function App() {
       <br />
       <PersonInfo person={karol} />
       <br />
-      <img src={imageFromAssets} alt="" />
+      <img src="https://zrozumiecreact.pl/dog.jpg" alt="" />
     </>
   );
 }
