@@ -1,12 +1,16 @@
 function App() {
+  function logMouseLeave() {
+    console.log("on mouse leave");
+  }
   const buttonEl = (
     <button
       onClick={() => {
         alert("Klik!");
       }}
-      onMouseEnter={() => {
+      onMouseEnter={function () {
         console.log("on mouse enter");
       }}
+      onMouseOut={logMouseLeave}
     >
       Pokaż spoiler
     </button>
