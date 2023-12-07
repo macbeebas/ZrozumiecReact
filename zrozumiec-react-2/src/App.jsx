@@ -1,24 +1,15 @@
+import { ButtonStrong } from "./components/ButtonStrong";
+
 function App() {
-  function logMouseLeave() {
-    console.log("on mouse leave");
-  }
   const buttonEl = (
     <button
       onClick={() => {
         alert("Klik!");
       }}
-      onMouseEnter={function () {
-        console.log("on mouse enter");
-      }}
-      onMouseOut={logMouseLeave}
     >
       Pokaż spoiler
     </button>
   );
-
-  // document.querySelector("button").addEventListener("click", () => {
-  //   alert("Klik");
-  // });
 
   return (
     <>
@@ -27,6 +18,13 @@ function App() {
       <h3>Fabuła</h3>
       <p>Dobrzy walczą ze złymi. Trzeba wyłączyc pole siłowe.</p>
       {buttonEl}
+      {/* Tutaj przekazujemy propsy z tagiem "onCLick" i jego wartością "() => alert..." */}
+      <ButtonStrong onClick={() => alert("GRUBY klik!")}>
+        Pokaż GRUBY spoiler
+      </ButtonStrong>
+      <ButtonStrong onClick={() => alert("inny GRUBY klik!")}>
+        Pokaż inny GRUBY spoiler
+      </ButtonStrong>
       <p>Vader okazuje się być ojcem Luka.</p>
     </>
   );
