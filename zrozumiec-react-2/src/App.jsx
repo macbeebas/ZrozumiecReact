@@ -1,5 +1,16 @@
 function App() {
-  const buttonEl = <button>Pokaż spoiler</button>;
+  const buttonEl = (
+    <button
+      onClick={() => {
+        alert("Klik!");
+      }}
+      onMouseEnter={() => {
+        console.log("on mouse enter");
+      }}
+    >
+      Pokaż spoiler
+    </button>
+  );
 
   // document.querySelector("button").addEventListener("click", () => {
   //   alert("Klik");
