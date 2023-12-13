@@ -8,7 +8,7 @@ function App() {
       <h1>Gwiezdne Wojny V</h1>
       <h2>Rok produkcji: 1980</h2>
       <h3>Fabuła</h3>
-      <p>Dobrzy walczą ze złymi. Trzeba wyłączyc pole siłowe.</p>
+      <p>Dobrzy walczą ze złymi. Trzeba wyłączyć pole siłowe.</p>
       <button onClick={handleClick}>Pokaż spoiler</button>
       <p>Vader okazuje się być ojcem Luka.</p>
     </>
