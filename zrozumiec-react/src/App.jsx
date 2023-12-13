@@ -1,7 +1,12 @@
 function App() {
+  let isSpoilerShown = false;
+
   function handleClick() {
-    alert("Klik!");
+    isSpoilerShown = true;
+    console.log("handleClick!");
   }
+
+  console.log("<App> - render");
 
   return (
     <>
@@ -10,7 +15,7 @@ function App() {
       <h2>Fabuła</h2>
       <p>Dobrzy walczą ze złymi. Trzeba wyłączyć pole siłowe.</p>
       <button onClick={handleClick}>Pokaż spoiler</button>
-      <p>Vader okazuje się być ojcem Luka.</p>
+      {isSpoilerShown && <p>Vader okazuje się być ojcem Luka.</p>}
     </>
   );
 }
