@@ -18,7 +18,21 @@ function App() {
       <h2>Fabuła</h2>
       <p>Dobrzy walczą ze złymi. Trzeba wyłączyć pole siłowe.</p>
       {buttonEl}
-      <ButtonStrong>Pokaż GRUBY spoiler</ButtonStrong>
+      <ButtonStrong
+        onClick={() => {
+          alert("GRUBY Klik!");
+        }}
+      >
+        Pokaż GRUBY spoiler
+      </ButtonStrong>
+      <ButtonStrong
+        onClick={() => {
+          alert("INNY GRUBY Klik!");
+        }}
+      >
+        Pokaż INNY GRUBY spoiler
+      </ButtonStrong>
+
       <p>Vader okazuje się być ojcem Luka.</p>
     </>
   );
