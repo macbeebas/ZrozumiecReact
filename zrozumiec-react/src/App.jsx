@@ -1,15 +1,7 @@
-import { ButtonStrong } from "./components/ButtonStrong";
-
 function App() {
-  const buttonEl = (
-    <button
-      onClick={() => {
-        alert("Klik!");
-      }}
-    >
-      Pokaż spoiler
-    </button>
-  );
+  function handleClick() {
+    alert("Klik!");
+  }
 
   return (
     <>
@@ -17,22 +9,8 @@ function App() {
       <h2>Rok produkcji: 1980</h2>
       <h2>Fabuła</h2>
       <p>Dobrzy walczą ze złymi. Trzeba wyłączyć pole siłowe.</p>
-      {buttonEl}
-      <ButtonStrong
-        onClick={() => {
-          alert("GRUBY Klik!");
-        }}
-      >
-        Pokaż GRUBY spoiler
-      </ButtonStrong>
-      <ButtonStrong
-        onClick={() => {
-          alert("INNY GRUBY Klik!");
-        }}
-      >
-        Pokaż INNY GRUBY spoiler
-      </ButtonStrong>
 
+      <button onClick={handleClick}>Pokaż spoiler</button>
       <p>Vader okazuje się być ojcem Luka.</p>
     </>
   );
