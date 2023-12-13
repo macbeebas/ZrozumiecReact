@@ -1,17 +1,11 @@
-function App() {
-  function logMouseLeave() {
-    console.log("on mouse leave");
-  }
+import { ButtonStrong } from "./components/ButtonStrong";
 
+function App() {
   const buttonEl = (
     <button
       onClick={() => {
         alert("Klik!");
       }}
-      onMouseEnter={function () {
-        console.log("on mouse enter");
-      }}
-      onMouseOut={logMouseLeave}
     >
       Pokaż spoiler
     </button>
@@ -24,6 +18,7 @@ function App() {
       <h2>Fabuła</h2>
       <p>Dobrzy walczą ze złymi. Trzeba wyłączyć pole siłowe.</p>
       {buttonEl}
+      <ButtonStrong>Pokaż GRUBY spoiler</ButtonStrong>
       <p>Vader okazuje się być ojcem Luka.</p>
     </>
   );
