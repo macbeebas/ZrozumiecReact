@@ -2,9 +2,11 @@ import { useState } from "react";
 
 function App() {
   const [isSpoilerShown, setIsSpoilerShown] = useState(false);
+  const [isButtonShown, setIsButtonShown] = useState(true);
 
   function handleClick() {
     setIsSpoilerShown(true);
+    setIsButtonShown(false);
     console.log("handleClick!");
   }
 
@@ -16,7 +18,7 @@ function App() {
       <h2>Rok produkcji: 1980</h2>
       <h2>Fabuła</h2>
       <p>Dobrzy walczą ze złymi. Trzeba wyłączyć pole siłowe.</p>
-      <button onClick={handleClick}>Pokaż spoiler</button>
+      {isButtonShown && <button onClick={handleClick}>Pokaż spoiler</button>}
       {isSpoilerShown && <p>Vader okazuje się być ojcem Luka.</p>}
     </>
   );
