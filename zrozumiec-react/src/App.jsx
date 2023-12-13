@@ -1,9 +1,21 @@
 function App() {
-  const buttonEl = <button>Pokaż spoiler</button>;
+  function logMouseLeave() {
+    console.log("on mouse leave");
+  }
 
-  // document.querySelector("button").addEventListener("click", () => {
-  //     alert("Klik");
-  // });
+  const buttonEl = (
+    <button
+      onClick={() => {
+        alert("Klik!");
+      }}
+      onMouseEnter={function () {
+        console.log("on mouse enter");
+      }}
+      onMouseOut={logMouseLeave}
+    >
+      Pokaż spoiler
+    </button>
+  );
 
   return (
     <>
