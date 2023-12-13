@@ -1,8 +1,14 @@
+import { useState } from "react";
+
 function App() {
-  let isSpoilerShown = false;
+  const isSpoilerShownState = useState(false);
+  console.log(isSpoilerShownState);
+
+  let isSpoilerShown = isSpoilerShownState[0];
+  const setIsSpoilerShown = isSpoilerShownState[1];
 
   function handleClick() {
-    isSpoilerShown = true;
+    setIsSpoilerShown(true);
     console.log("handleClick!");
   }
 
