@@ -1,10 +1,7 @@
 import { useState } from "react";
 
 function App() {
-  const isSpoilerShownState = useState(false);
-  console.log(isSpoilerShownState);
-
-  const [isSpoilerShown, setIsSpoilerShown] = isSpoilerShownState;
+  const [isSpoilerShown, setIsSpoilerShown] = useState(false);
 
   function handleClick() {
     setIsSpoilerShown(true);
