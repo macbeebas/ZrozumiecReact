@@ -4,8 +4,7 @@ function App() {
   const isSpoilerShownState = useState(false);
   console.log(isSpoilerShownState);
 
-  let isSpoilerShown = isSpoilerShownState[0];
-  const setIsSpoilerShown = isSpoilerShownState[1];
+  const [isSpoilerShown, setIsSpoilerShown] = isSpoilerShownState;
 
   function handleClick() {
     setIsSpoilerShown(true);
