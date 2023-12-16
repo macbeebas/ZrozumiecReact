@@ -16,11 +16,11 @@ function App() {
   }
 
   function handleLikeBtnClick() {
-    setNumberOfLikes(numberOfLikes + 1);
+    setNumberOfLikes((previousNumberOfLikes) => previousNumberOfLikes + 1);
   }
 
   function handleLoveBtnClick() {
-    setNumberOfLikes(numberOfLikes + 3);
+    setNumberOfLikes((previousNumberOfLikes) => previousNumberOfLikes + 3);
   }
 
   console.log("<App> - render");
