@@ -19,6 +19,10 @@ function App() {
     setNumberOfLikes(numberOfLikes + 1);
   }
 
+  function handleLoveBtnClick() {
+    setNumberOfLikes(numberOfLikes + 3);
+  }
+
   console.log("<App> - render");
 
   return (
@@ -27,6 +31,7 @@ function App() {
       <h2>Rok produkcji: 1980</h2>
       <h2>Liczba polubień: {numberOfLikes}</h2>
       <button onClick={handleLikeBtnClick}>Lubię to!</button>
+      <button onClick={handleLoveBtnClick}>Kocham to!</button>
       <h2>Fabuła</h2>
       {isWarningShown && (
         <p>
