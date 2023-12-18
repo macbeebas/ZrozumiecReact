@@ -2,17 +2,22 @@ import { useState } from "react";
 
 export function Form() {
   const [review, setReview] = useState(null);
+  const [inputValue, setInputValue] = useState("");
+  const [textareaValue, setTextareaValue] = useState("");
 
   console.log(review);
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(event);
-    const author = event.target[0].value;
-    const text = event.target[1].value;
+
+    const author = inputValue;
+    const text = textareaValue;
 
     setReview({ author, text });
   }
+
+  console.log("Wartość zmiennej stanowej 'input':", inputValue);
+  console.log("Wartość zmiennej stanowej 'textarea':", textareaValue);
 
   return (
     <>
@@ -28,13 +33,26 @@ export function Form() {
           <div>
             <label htmlFor="author">Autor</label>
           </div>
-          <input type="text" name="author" id="author" />
+          <input
+            type="text"
+            name="author"
+            id="author"
+            onChange={(event) => {
+              setInputValue(event.target.value);
+            }}
+          />
         </div>
         <div>
           <div>
             <label htmlFor="text">Tekst</label>
           </div>
-          <textarea name="text" id="text"></textarea>
+          <textarea
+            name="text"
+            id="text"
+            onChange={(event) => {
+              setTextareaValue(event.target.value);
+            }}
+          ></textarea>
         </div>
         <button type="submit">Dodaj</button>
       </form>
