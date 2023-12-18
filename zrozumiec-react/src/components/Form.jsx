@@ -2,8 +2,8 @@ import { useState } from "react";
 
 export function Form() {
   const [review, setReview] = useState(null);
-  const [inputValue, setInputValue] = useState("");
-  const [textareaValue, setTextareaValue] = useState("");
+  const [inputValue, setInputValue] = useState("Miszka");
+  const [textareaValue, setTextareaValue] = useState("Super!");
 
   console.log(review);
 
@@ -37,6 +37,7 @@ export function Form() {
             type="text"
             name="author"
             id="author"
+            value={inputValue}
             onChange={(event) => {
               setInputValue(event.target.value);
             }}
@@ -49,12 +50,18 @@ export function Form() {
           <textarea
             name="text"
             id="text"
+            value={textareaValue}
             onChange={(event) => {
               setTextareaValue(event.target.value);
             }}
           ></textarea>
         </div>
-        <button type="submit">Dodaj</button>
+        <button
+          type="submit"
+          disabled={inputValue === "" || textareaValue === ""}
+        >
+          Dodaj
+        </button>
       </form>
     </>
   );
