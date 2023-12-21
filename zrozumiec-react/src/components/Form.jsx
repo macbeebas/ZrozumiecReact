@@ -5,6 +5,10 @@ export function Form() {
   const [inputValue, setInputValue] = useState("");
   const [textareaValue, setTextareaValue] = useState("");
 
+  const arrayOfNumbers = [1, 2, 3, 4, 5].map((number) => (
+    <li>Item {number}</li>
+  ));
+
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -16,6 +20,8 @@ export function Form() {
 
   return (
     <>
+      <hr />
+      <ul>{arrayOfNumbers}</ul>
       {review && (
         <article>
           <strong>{review.author}</strong>
