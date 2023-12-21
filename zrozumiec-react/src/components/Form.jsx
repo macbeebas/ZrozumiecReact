@@ -2,10 +2,8 @@ import { useState } from "react";
 
 export function Form() {
   const [review, setReview] = useState(null);
-  const [inputValue, setInputValue] = useState("Miszka");
-  const [textareaValue, setTextareaValue] = useState("Super!");
-
-  console.log(review);
+  const [inputValue, setInputValue] = useState("");
+  const [textareaValue, setTextareaValue] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -15,9 +13,6 @@ export function Form() {
 
     setReview({ author, text });
   }
-
-  console.log("Wartość zmiennej stanowej 'input':", inputValue);
-  console.log("Wartość zmiennej stanowej 'textarea':", textareaValue);
 
   return (
     <>
