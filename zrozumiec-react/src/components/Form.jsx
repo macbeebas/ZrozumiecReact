@@ -11,7 +11,7 @@ export function Form() {
   const [textareaValue, setTextareaValue] = useState("");
 
   const reviewsElement = reviews.map((r) => (
-    <article>
+    <article key={r.id}>
       <strong>{r.author}</strong>
       <p>{r.text}</p>
     </article>
@@ -22,6 +22,12 @@ export function Form() {
 
     const author = inputValue;
     const text = textareaValue;
+
+    setReviews((prevReviews) => {
+      return [{ author, text, id: prevReviews.length + 1 }, ...prevReviews];
+    });
+    setInputValue("");
+    setTextareaValue("");
   }
 
   return (
