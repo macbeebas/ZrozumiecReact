@@ -11,9 +11,14 @@ export function Form() {
   const [textareaValue, setTextareaValue] = useState("");
 
   const reviewsElement = reviews.map((r) => (
+    // const reviewsElement = reviews.map((r, index) => ( // 1
+    // const reviewsElement = reviews.map((r) => ( // 2
     <article key={r.id}>
+      {/* <article key={index}> */}
+      {/* <article> */}
       <strong>{r.author}</strong>
       <p>{r.text}</p>
+      {/* <input type="text" /> */}
     </article>
   ));
 
