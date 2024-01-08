@@ -5,10 +5,18 @@ const emojis = ["🚀", "🎶", "🎁", "🎉", "✨"];
 
 export function List() {
   return (
-    <ul className="list">
-      {emojis.map((emoji) => (
-        <Item key={emoji} emoji={emoji} />
-      ))}
-    </ul>
+    <>
+      <button
+        className="btn"
+        onClick={() => alert(`Liczba emoji: ${emojis.length}`)}
+      >
+        Pokaż liczbę emoji
+      </button>
+      <ul className="list">
+        {emojis.map((emoji) => (
+          <Item key={emoji} emoji={emoji} />
+        ))}
+      </ul>
+    </>
   );
 }
