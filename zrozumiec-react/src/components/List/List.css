@@ -7,7 +7,7 @@
     padding: 30px;
 }
 
-.btn {
+.list__btn {
     background: transparent;
     border: solid 1px;
     padding: 12px;
@@ -19,7 +19,7 @@
     margin: 30px;
 }
 
-.btn:hover {
+.list__btn:hover {
     color: white;
     background: salmon;
 }

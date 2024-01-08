@@ -7,7 +7,7 @@ export function List() {
   return (
     <>
       <button
-        className="btn"
+        className="list__btn"
         onClick={() => alert(`Liczba emoji: ${emojis.length}`)}
       >
         Pokaż liczbę emoji
