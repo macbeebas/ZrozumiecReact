@@ -1,21 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-
-const StyledButton = styled.button`
-  background: transparent;
-  border: solid 1px;
-  padding: 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100px;
-  color: white;
-  transition: background 0.3s, color 0.3s;
-
-  &:hover {
-    color: salmon;
-    background: white;
-  }
-`;
+import { StyledButton } from "../styles/StyledButton";
 
 const StyledItem = styled.li`
   background: salmon;
@@ -33,7 +18,7 @@ const StyledEmoji = styled.span`
 
   /* transform: ${({ $zoomed }) => ($zoomed ? "scale(2)" : "scale(1)")}; */
   /* or */
-  ${({ $zoomed }) => $zoomed && "transform: scale(2)"};
+  ${({ $zoomed }) => $zoomed && "transform: scale(2)"}
 `;
 
 export function Item({ emoji }) {
@@ -43,6 +28,7 @@ export function Item({ emoji }) {
     <StyledItem>
       <StyledEmoji $zoomed={zoomed}>{emoji}</StyledEmoji>
       <StyledButton
+        $margin={30}
         onClick={() => {
           setZoomed((wasZoomed) => !wasZoomed);
         }}
