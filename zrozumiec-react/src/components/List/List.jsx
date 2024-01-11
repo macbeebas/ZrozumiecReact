@@ -24,13 +24,15 @@ const StyledButton = styled.button`
 export function List() {
   return (
     <>
-      <StyledButton>Test</StyledButton>
-      <button
+      <StyledButton onClick={() => alert(`Liczba emoji: ${emojis.length}`)}>
+        Pokaż liczbę emoji
+      </StyledButton>
+      {/* <button
         className={styles.btn}
         onClick={() => alert(`Liczba emoji: ${emojis.length}`)}
       >
         Pokaż liczbę emoji
-      </button>
+      </button> */}
       <ul className={styles.list}>
         {emojis.map((emoji) => (
           <Item key={emoji} emoji={emoji} />
