@@ -31,9 +31,9 @@ const StyledEmoji = styled.span`
   transition: transform 0.3s;
   overflow: hidden;
 
-  /* transform: ${(props) => (props.zoomed ? "scale(2)" : "scale(1)")}; */
-  /* v--- descructuring 'props' ---v */
-  transform: ${({ zoomed }) => (zoomed ? "scale(2)" : "scale(1)")};
+  /* transform: ${({ $zoomed }) => ($zoomed ? "scale(2)" : "scale(1)")}; */
+  /* or */
+  ${({ $zoomed }) => $zoomed && "transform: scale(2)"};
 `;
 
 export function Item({ emoji }) {
@@ -41,7 +41,7 @@ export function Item({ emoji }) {
 
   return (
     <StyledItem>
-      <StyledEmoji zoomed={zoomed}>{emoji}</StyledEmoji>
+      <StyledEmoji $zoomed={zoomed}>{emoji}</StyledEmoji>
       <StyledButton
         onClick={() => {
           setZoomed((wasZoomed) => !wasZoomed);
