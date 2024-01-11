@@ -21,11 +21,11 @@ const StyledEmoji = styled.span`
   ${({ $zoomed }) => $zoomed && "transform: scale(2)"}
 `;
 
-export function Item({ emoji }) {
+export function Item({ emoji, className }) {
   const [zoomed, setZoomed] = useState(false);
 
   return (
-    <StyledItem>
+    <StyledItem className={className}>
       <StyledEmoji $zoomed={zoomed}>{emoji}</StyledEmoji>
       <StyledButton
         $margin={30}
