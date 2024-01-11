@@ -1,11 +1,21 @@
 import { useState } from "react";
 import styles from "./Item.module.css";
+import styled from "styled-components";
+
+const StyledButton = styled.button``;
+
+const StyledItem = styled.li`
+  background: salmon;
+  padding: 30px 50px;
+  border-radius: 20px;
+  text-align: center;
+`;
 
 export function Item({ emoji }) {
   const [zoomed, setZoomed] = useState(false);
 
   return (
-    <li className={styles.item}>
+    <StyledItem>
       <span className={`${styles.emoji} ${zoomed ? styles.zoomed : ""}`}>
         {emoji}
       </span>
@@ -17,6 +27,6 @@ export function Item({ emoji }) {
       >
         {zoomed ? "Oddal" : "Przybliż"}
       </button>
-    </li>
+    </StyledItem>
   );
 }
