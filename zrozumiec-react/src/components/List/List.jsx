@@ -22,7 +22,7 @@ export function List() {
       <button onClick={() => alert(`Liczba emoji: ${emojis.length}`)}>
         Pokaż liczbę emoji
       </button>
-      <ul>
+      <ul className="flex flex-col gap-6">
         {emojis.map((emoji) => (
           <Item key={emoji} emoji={emoji} />
         ))}
