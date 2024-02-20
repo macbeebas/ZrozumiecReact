@@ -16,7 +16,7 @@ export function Panel() {
 
   return (
     <>
-      <Button onClick={handleLoadClick}>Załaduje dane</Button>
+      <Button onClick={handleLoadClick}>Załaduj dane</Button>
       <section className={styles.section}>
         <List data={data}></List>
       </section>
