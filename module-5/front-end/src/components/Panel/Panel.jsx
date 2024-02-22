@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Button } from "../Button/Button";
 import { List } from "../List/List";
 import styles from "./Panel.module.css";
 
@@ -15,19 +14,15 @@ export function Panel() {
       });
   }, []);
 
-  useEffect(() => {
-    console.log("Pierwszy render!");
-  }, []);
-
   if (isLoading) {
     return <p>Ładowanie...</p>;
   }
 
   return (
-    <>
-      <section className={styles.section}>
-        <List data={data}></List>
-      </section>
-    </>
+    // <>
+    <section className={styles.section}>
+      <List data={data}></List>
+    </section>
+    // </>
   );
 }
