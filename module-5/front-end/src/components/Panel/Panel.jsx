@@ -11,6 +11,7 @@ export function Panel() {
       .then((res) => res.json())
       .then((res) => {
         setData(res);
+        setIsLoading(false);
       });
   }, []);
 
@@ -18,9 +19,11 @@ export function Panel() {
     console.log("Pierwszy render!");
   }, []);
 
-  return isLoading ? (
-    <p>Ładowanie...</p>
-  ) : (
+  if (isLoading) {
+    return <p>Ładowanie...</p>;
+  }
+
+  return (
     <>
       <section className={styles.section}>
         <List data={data}></List>
