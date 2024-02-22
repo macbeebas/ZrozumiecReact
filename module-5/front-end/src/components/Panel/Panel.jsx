@@ -13,17 +13,12 @@ export function Panel() {
       });
   }, []);
 
-  function handleLoadClick() {
-    fetch("http://localhost:3000/words")
-      .then((res) => res.json())
-      .then((res) => {
-        setData(res);
-      });
-  }
+  useEffect(() => {
+    console.log("Pierwszy render!");
+  }, []);
 
   return (
     <>
-      <Button onClick={handleLoadClick}>Załaduj dane</Button>
       <section className={styles.section}>
         <List data={data}></List>
       </section>
